@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Style from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro -->
     <style>
       table {
         font-family: arial, sans-serif;
         border-collapse: collapse;
         width: 100%;
-
       }
 
-      td,
-      th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
+      th,
+      td {
+        padding: 5px;
       }
 
       tr:nth-child(even) {
-        background-color: #dddddd;
+        background-color: #aed88b;
+      }
+      tr:nth-child(odd) {
+        background-color: #e3ffcc;
+      }
+      tr:first-child {
+        background-color: #1b2e0a;
       }
     </style>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,19 +41,19 @@
   <body>
     <h2>API Design - Ottawa Grassroots Application</h2>
     <section>
-        <table class="centered" id="main">
-            <tr class="fixedHeader">
-              <th>API Name</th>
-              <th>Type</th>
-              <th>Used for</th>
-              <th>Method</th>
-              <th>Need Auth</th>
-              <th>Information</th>
-            </tr>
-            <tr class="info"></tr>
-          </table>
+      <table class="centered" id="main">
+        <tr class="fixedHeader">
+          <th class="firstText">API Name</th>
+          <th class="firstText">Type</th>
+          <th class="firstText">Used for</th>
+          <th class="firstText">Method</th>
+          <th class="firstText">Need Auth</th>
+          <th class="firstText">Information</th>
+        </tr>
+        <tr class="info"></tr>
+      </table>
     </section>
-    <footer>
+    <!-- <footer>
         <ul class="pagination center">
             <li class="disabled"><a href="#!"><i class="material-icons">&larr;</i></a></li>
             <li class="active"><a href="#!">1</a></li>
@@ -61,7 +63,7 @@
             <li class="waves-effect"><a href="#!">5</a></li>
             <li class="waves-effect"><a href="#!"><i class="material-icons">&rarr;</i></a></li>
           </ul>
-    </footer>
+    </footer> -->
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>

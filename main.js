@@ -281,14 +281,25 @@ function init() {
     let row = document.createElement("tr");
     let name = document.createElement("th");
     name.textContent = item.name;
+    item.firebase == "Storage"
+      ? name.classList.add("storage")
+      : item.firebase == "Firestore"
+      ? name.classList.add("firestore")
+      : name.classList.add("auth");
+
     let type = document.createElement("th");
     type.textContent = item.type;
+    item.type == "GET" ? type.classList.add("get") : type.classList.add("post");
+
     let usedFor = document.createElement("th");
     usedFor.textContent = item.for;
+
     let method = document.createElement("th");
     method.textContent = item.method;
     let auth = document.createElement("th");
+    item.auth === true ? auth.classList.add("yes") : auth.classList.add("no");
     auth.textContent = item.auth;
+
     let info = document.createElement("th");
     info.textContent = item.info;
     row.appendChild(name);
