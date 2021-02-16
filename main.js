@@ -253,6 +253,226 @@ Parameters: title - caption - start_date - end_date - votes`,
 Parameters: title - date - songs`,
   },
   {
+    name: "Update Festival",
+    firebase: "Firestore",
+    type: "PATCH",
+    for: "Admin",
+    method: `collection(“festival_year").doc(“festival_id”).update({})`,
+    auth: true,
+    info: `Used to update a new festival
+
+Parameters: events - description - start_date - end_date - location`,
+  },
+  {
+    name: "Update Act",
+    firebase: "Firestore",
+    type: "PATCH",
+    for: "Admin",
+    method: `collection(“acts").doc(“act_id”).update({})`,
+    auth: true,
+    info: `Used to update a new act
+
+Parameters: type - description - videos - songs - main_image - social_media - photos - name - event_id`,
+  },
+  {
+    name: "Update Event",
+    firebase: "Firestore",
+    type: "PATCH",
+    for: "Admin",
+    method: `collection(“events").doc(“event_id”).update({})`,
+    auth: true,
+    info: `Used to update a new event outside of festival
+
+Parameters: line_up - photos - location - date`,
+  },
+  {
+    name: "Update Song",
+    firebase: "Firestore",
+    type: "PATCH",
+    for: "Admin",
+    method: `collection(“songs").doc(“song_id”).update({})`,
+    auth: true,
+    info: `Used to update a new song
+
+Parameters: duration - path - year - description - act_id - title`,
+  },
+  {
+    name: "Update Photo",
+    firebase: "Firestore",
+    type: "PATCH",
+    for: "Admin",
+    method: `collection(photos").doc(“photo_id”).update({})`,
+    auth: true,
+    info: `Used to update a new photo
+
+Parameters: path - description - act_id - title`,
+  },
+  {
+    name: "Update Video",
+    firebase: "Firestore",
+    type: "PATCH",
+    for: "Admin",
+    method: `collection("videos").doc(“video_id”).update({})`,
+    auth: true,
+    info: `Used to update a new video
+
+Parameters: duration - path - year - description - act_id - title`,
+  },
+  {
+    name: "Update Task",
+    firebase: "Firestore",
+    type: "PATCH",
+    for: "Admin",
+    method: `collection(“tasks").doc(“task_id”).update({})`,
+    auth: true,
+    info: `Used to update a new task
+
+Parameters: name - description - volunteers_assigned - start_date - end_date - location`,
+  },
+  {
+    name: "Update Volunteer",
+    firebase: "Firestore",
+    type: "PATCH",
+    for: "Admin",
+    method: `collection(“volunteers").doc(“volunteer_id”).update({})`,
+    auth: true,
+    info: `Used to update a new volunteer
+
+Parameters: emergency_contacts - email - profile_picture - full_name - tasks - phone_numbers`,
+  },
+  {
+    name: "Update Poll",
+    firebase: "Firestore",
+    type: "PATCH",
+    for: "Admin",
+    method: `collection(“polls").doc(“poll_id”).update({})`,
+    auth: true,
+    info: `Used to update a new poll
+
+Parameters: title - caption - start_date - end_date - votes`,
+  },
+  {
+    name: "Update Playlist",
+    firebase: "Firestore",
+    type: "PATCH",
+    for: "Admin",
+    method: `collection(“playlists").doc(“playlist_id”).update({})`,
+    auth: true,
+    info: `Used to update a new playlist
+
+Parameters: title - date - songs`,
+  },
+  {
+    name: "Delete Festival",
+    firebase: "Firestore",
+    type: "DELETE",
+    for: "Admin",
+    method: `collection(“festival_year").doc(“festival_id”).delete({})`,
+    auth: true,
+    info: `Used to delete a new festival
+
+Parameters: events - description - start_date - end_date - location`,
+  },
+  {
+    name: "Delete Act",
+    firebase: "Firestore",
+    type: "DELETE",
+    for: "Admin",
+    method: `collection(“acts").doc(“act_id”).delete({})`,
+    auth: true,
+    info: `Used to delete a new act
+
+Parameters: type - description - videos - songs - main_image - social_media - photos - name - event_id`,
+  },
+  {
+    name: "Delete Event",
+    firebase: "Firestore",
+    type: "DELETE",
+    for: "Admin",
+    method: `collection(“events").doc(“event_id”).delete({})`,
+    auth: true,
+    info: `Used to delete a new event outside of festival
+
+Parameters: line_up - photos - location - date`,
+  },
+  {
+    name: "Delete Song",
+    firebase: "Firestore",
+    type: "DELETE",
+    for: "Admin",
+    method: `collection(“songs").doc(“song_id”).delete({})`,
+    auth: true,
+    info: `Used to delete a new song
+
+Parameters: duration - path - year - description - act_id - title`,
+  },
+  {
+    name: "Delete Photo",
+    firebase: "Firestore",
+    type: "DELETE",
+    for: "Admin",
+    method: `collection(photos").doc(“photo_id”).delete({})`,
+    auth: true,
+    info: `Used to delete a new photo
+
+Parameters: path - description - act_id - title`,
+  },
+  {
+    name: "Delete Video",
+    firebase: "Firestore",
+    type: "DELETE",
+    for: "Admin",
+    method: `collection("videos").doc(“video_id”).delete({})`,
+    auth: true,
+    info: `Used to delete a new video
+
+Parameters: duration - path - year - description - act_id - title`,
+  },
+  {
+    name: "Delete Task",
+    firebase: "Firestore",
+    type: "DELETE",
+    for: "Admin",
+    method: `collection(“tasks").doc(“task_id”).delete({})`,
+    auth: true,
+    info: `Used to delete a new task
+
+Parameters: name - description - volunteers_assigned - start_date - end_date - location`,
+  },
+  {
+    name: "Delete Volunteer",
+    firebase: "Firestore",
+    type: "DELETE",
+    for: "Admin",
+    method: `collection(“volunteers").doc(“volunteer_id”).delete({})`,
+    auth: true,
+    info: `Used to delete a new volunteer
+
+Parameters: emergency_contacts - email - profile_picture - full_name - tasks - phone_numbers`,
+  },
+  {
+    name: "Delete Poll",
+    firebase: "Firestore",
+    type: "DELETE",
+    for: "Admin",
+    method: `collection(“polls").doc(“poll_id”).delete({})`,
+    auth: true,
+    info: `Used to delete a new poll
+
+Parameters: title - caption - start_date - end_date - votes`,
+  },
+  {
+    name: "Delete Playlist",
+    firebase: "Firestore",
+    type: "DELETE",
+    for: "Admin",
+    method: `collection(“playlists").doc(“playlist_id”).delete({})`,
+    auth: true,
+    info: `Used to delete a new playlist
+
+Parameters: title - date - songs`,
+  },
+  {
     name: "Upload audio/ image",
     firebase: "Storage",
     type: "POST",
@@ -289,7 +509,13 @@ function init() {
 
     let type = document.createElement("th");
     type.textContent = item.type;
-    item.type == "GET" ? type.classList.add("get") : type.classList.add("post");
+    item.type == "GET"
+      ? type.classList.add("get")
+      : item.type == "POST"
+      ? type.classList.add("post")
+      : item.type == "PATCH"
+      ? type.classList.add("patch")
+      : type.classList.add("delete");
 
     let usedFor = document.createElement("th");
     usedFor.textContent = item.for;
