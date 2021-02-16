@@ -5,6 +5,14 @@
 body{
     background-color: rgba(0, 0, 0, 0.096);
 }
+.type{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+.header{
+    padding-left: 15px;
+}
 .firestore {
     color: indianred
 }
@@ -32,7 +40,7 @@ body{
     color: white;
 }
 .patch{
-    background-color: coral;
+    background-color: rgb(204, 98, 59);
     color: white;
 }
 .delete{
